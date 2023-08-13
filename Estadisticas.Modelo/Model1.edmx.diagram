@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc5b584f5e3b44758e02b924a62427cf" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="EstadísticasModel.Usuarios" Width="1.5" PointX="3.5" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="EstadísticasModel.Roles" Width="1.5" PointX="9.75" PointY="0.5" />
+        <EntityTypeShape EntityType="EstadísticasModel.UsuarioRol" Width="1.5" PointX="6.5" PointY="0.5" />
+        <AssociationConnector Association="EstadísticasModel.FK_UsuarioRol_Roles" />
+        <AssociationConnector Association="EstadísticasModel.FK_UsuarioRol_Usuarios" />
+        <EntityTypeShape EntityType="EstadísticasModel.Perfiles" Width="1.5" PointX="0.5" PointY="0.5" />
+        <AssociationConnector Association="EstadísticasModel.FK_Perfiles_Usuarios" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

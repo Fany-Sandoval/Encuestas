@@ -1,0 +1,22 @@
+﻿@model Encuestas.Models.RolesViewModel
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            @using (Html.BeginForm("Create", "Roles", FormMethod.Post))
+            {
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.strValor, new { @class="form-control input-sm", Id="strValor", placeholder="Ingresa el rol", required= "required", pattern= "^[a-záéíóúñA-ZÁÉÍÓÚÑ. ]+$", minlength= "5" })
+                    @Html.ValidationMessageFor(model => model.strValor, null, new { @class="text-danger"})
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Guardar" class="btn btn-sm btn-success" />
+                </div>
+            }
+        </div>
+    </div>
+</div>

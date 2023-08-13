@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Lugar de la encuesta</h2>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <label>User is: @User.Identity.Name</label><span>Time is: @DateTime.Now</span>
+        </div>
+        <hr />
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        Acciones de Usuario de acuerdo al rol
+                    </div>
+                </div>
+                <div class="card-body">
+                    <button id="btnMensaje" class="btn btn-sm btn-success">Actualizar</button>
+                    @if (User.IsInRole("Administrador"))
+                    {
+                        <button id="btnMensaje" class="btn btn-sm btn-danger">Eliminar</button>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

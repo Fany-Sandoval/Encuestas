@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "TestAjaxRoles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div class="form-group">
+                @Html.DropDownList("RolesId", null, new { @class = "form-control", id = "RolesId" })
+            </div>
+            <div class="form-group">
+                @Html.DropDownList("UsuariosId", null, new { @class = "form-control", id = "UsuariosId" })
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/usuarios/validate_usuario.js"></script>
